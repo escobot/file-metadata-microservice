@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const multer  = require('multer')
+const port = process.env.PORT || 8000;
 let upload = multer({ dest: 'uploads/' })
 
 app.get('/*', function (req, res) {
@@ -15,5 +16,5 @@ app.post('/upload', upload.single('avatar'), function (req, res, next) {
     res.send({'size': req.file.size})
   })
 
-app.listen(3000);
-console.log('App running on http://localhost:3000');
+app.listen(port);
+console.log('App running on http://localhost:' + port);
