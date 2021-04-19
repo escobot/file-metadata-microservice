@@ -24,7 +24,7 @@ Run using NPM:
 # install dependencies
 npm install
 
-# run app at localhost:3000
+# run app at localhost:8000
 npm start
 ```
 
@@ -34,14 +34,14 @@ Run using Docker:
 docker build -t pbgnz/file-metadata-microservice .
 
 # run image
-docker run -p 3000:3000 -d pbgnz/file-metadata-microservice
+docker run -p 8000:8000 -d pbgnz/file-metadata-microservice
 ```
 
 Usage
 ```bash
 # submit webform image
-http://localhost:3000
+http://localhost:8000
 
 # post image via dataupload to
-http://localhost:3000/upload
+http://localhost:8000/upload
 ```
